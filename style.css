@@ -50,7 +50,7 @@ body {
 .symbol, .transcription {
     display: block;
     border-spacing: 0;
-    transition: all 2s ease;
+    transition: all 1s ease;
 }
 
 .symbol {
