@@ -1,0 +1,66 @@
+@import url(https://fonts.googleapis.com/css?family=Fjalla+One:400);
+
+body {
+    padding: auto;
+    margin: auto;
+    font-family: 'Fjalla One', sans-serif;
+    background-color: #37615e;
+    color: #fff;
+}
+
+.outer {
+    display: table; 
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.inner {
+    margin-left: auto;
+    margin-right: auto; 
+    width: 80vw;
+    vertical-align: center;
+}
+
+#title {
+    text-align: center;
+    font-weight: normal;
+    font-size: calc(1.5rem + 1vw);
+    padding-top: calc(1.5rem + 1vw);
+}
+
+.row {
+    text-align: center;
+    display: inline-table;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+.container {
+    text-align: center;
+    display: table-cell;
+    width: 20vw;
+}
+
+.symbol, .transcription {
+    display: block;
+    border-spacing: 0;
+    transition: all 2s ease;
+}
+
+.symbol {
+    cursor: pointer;
+    font-size: calc(1.5rem + 1vw);
+}
+
+.transcription, h2 {
+    font-size: calc(1rem + 1vw);
+    line-height: calc(1rem + 1vw);
+    font-weight: normal;
+    cursor: default;
+}
