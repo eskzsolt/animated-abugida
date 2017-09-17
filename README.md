@@ -1,4 +1,6 @@
 ﻿## :construction: An interactive showcase of the Inuktitut syllabary
+ 
+[Inuktitut syllabics on Wikipedia](https://en.wikipedia.org/wiki/Inuktitut_syllabics)
 ___
 
 Inspired by:
