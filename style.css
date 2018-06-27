@@ -1,50 +1,83 @@
-@import url(https://fonts.googleapis.com/css?family=Fjalla+One:400);
+@import url(https://fonts.googleapis.com/css?family=Fjalla+One|Oswald|Montserrat:400);
 
 body {
     padding: auto;
     margin: auto;
-    font-family: 'Fjalla One', sans-serif;
-    background-color: #37615e;
-    color: #fff;
+    font-family: sans-serif;
+    /*background-color: #37615e;*/
+    text-shadow: 0 0 1px rgba(51,51,51,0.2);
+    background: rgba(0, 0, 0, 0.2);
+    color: #f1f1f1;
+    /*text-transform: uppercase;*/
+}
+
+#video {
+    position: fixed;
+    overflow: hidden;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    transform: scale(1.1);
+
+    -webkit-filter: blur(15px);
+    -moz-filter: blur(15px);
+    -o-filter: blur(15px);
+    -ms-filter: blur(15px);
+    filter: blur(15px);
 }
 
 .outer {
-    display: table; 
+    display: table;
     position: absolute;
     height: 100%;
     width: 100%;
 }
 
 .inner {
-    margin-left: auto;
-    margin-right: auto; 
-    width: 80vw;
-    vertical-align: center;
-}
+    height: 100%;
 
-#title {
+    display: table-cell;
+    vertical-align: middle;
     text-align: center;
-    font-weight: normal;
-    font-size: calc(1.5rem + 1vw);
-    padding-top: calc(1.5rem + 1vw);
 }
 
 .row {
-    text-align: center;
     display: inline-table;
-
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+    vertical-align: middle;
+    text-align: center;
+    width: 60vw;
+    min-width: 300px;
 }
 
 .container {
+    vertical-align: middle;
     text-align: center;
     display: table-cell;
-    width: 20vw;
+    width: calc(4rem + 4vw);
+}
+
+#title {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-weight: normal;
+    font-size: calc(1.5rem + 1vw);
+    cursor: help;
+}
+
+.symbol {
+    cursor: pointer;
+    font-size: calc(0.5rem + 1.5vw);
+    line-height: auto;
+}
+
+.transcription, h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: calc(1rem + 1vw);
+    line-height: calc(1rem + 1vw);
+    padding-bottom: calc(0.5rem + 1vw);
+    font-weight: normal;
+    cursor: default;
 }
 
 .symbol, .transcription {
@@ -53,14 +86,12 @@ body {
     transition: all 1s ease;
 }
 
-.symbol {
-    cursor: pointer;
-    font-size: calc(1.5rem + 1vw);
-}
+#title, .row, .transcription {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
 
-.transcription, h2 {
-    font-size: calc(1rem + 1vw);
-    line-height: calc(1rem + 1vw);
-    font-weight: normal;
-    cursor: default;
 }

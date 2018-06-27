@@ -1,60 +1,50 @@
-var scaleDimensions = ['-1, 1', '-1, -1', '1, -1', '1, 1'];
+(function() {
 
-function adjustSymbol(modde, idName, idNameAd, arr) {
-    var counter = ($( '#' + idName ).data('counter')) || 0;
-    if (counter == 4) {counter = 0};
-    if (modde == "rotate") {
-        var angleR = ($( '#' + idName ).data('angle') + 90) || 90;
-        $( '#' + idName ).css({'transform': 'rotate(' + angleR + 'deg)'});
-        $( '#' + idName ).data('angle', angleR);
-    } else if (modde == "scale") {
-        $( '#' + idName ).css({'transform': 'scale(' + scaleDimensions[counter] + ')'});
+  function adjustment(id) {
+
+    const abugida = {
+      'ai': ['a', 'i', 'u', 'ai'],
+      'pai': ['pa', 'pi', 'pu', 'pai'],
+      'tai': ['ta', 'ti', 'tu', 'tai'],
+      'kai': ['ki', 'ka', 'ku', 'kai'],
+
+      'gai': ['gi', 'ga', 'gu', 'gai'],
+      'mai': ['mi', 'ma', 'mu', 'mai'],
+      'nai': ['ni', 'na', 'nu', 'nai'],
+      'sai': ['si', 'sa', 'su', 'sai'],
+
+      'lai': ['li', 'la', 'lu', 'lai'],
+      'jai': ['ji', 'ja', 'ju', 'jai'],
+      'vai': ['vi', 'va', 'vu', 'vai'],
+      'rai': ['ri', 'ra', 'ru', 'rai']
+    };
+
+    const scale_dimensions = ['-1, 1', '-1, -1', '1, -1', '1, 1'];
+
+    let counter = ($('#' + id).data('counter')) || 0;
+    if (counter == 4) counter = 0;
+
+    if (['ai', 'pai', 'tai'].includes(id)) {
+      let ank = ($('#' + id).data('angle') + 90) || 90;
+      $($('#' + id).find('.symbol')).css({'transform': 'rotate(' + ank + 'deg)'});
+      $('#' + id).data('angle', ank);
+    } else {
+      $($('#' + id).find('.symbol')).css({'transform': 'scale(' + scale_dimensions[counter] + ')'});
     }
-    $( '#' + idNameAd ).text(arr.split(',')[counter]);
+
+    $($('#' + id).find('.transcription')).text(abugida[id][counter]);
+
     counter++;
-    $( '#' + idName ).data('counter', counter);
-}
+    $('#' + id).data('counter', counter);
 
-$(function() {
+  }
 
-    $("#ai").on('click', function() {
-        adjustSymbol('rotate', 'ai', 'ai-t', 'a,i,u,ai');
-    });
-    $("#pai").on('click', function() {
-        adjustSymbol('rotate', 'pai', 'pai-t', 'pa,pi,pu,pai');
-    });
-    $("#tai").on('click', function() {
-        adjustSymbol('rotate', 'tai', 'tai-t', 'ta,ti,tu,tai');
-    });
-            
-    $("#ki").on('click', function() {
-        adjustSymbol('scale', 'ki', 'ki-t', 'ki,ka,ku,kai');
-    });
-    $("#gi").on('click', function() {
-        adjustSymbol('scale', 'gi', 'gi-t', 'gi,ga,gu,gai');
-    });
-    $("#mi").on('click', function() {
-        adjustSymbol('scale', 'mi', 'mi-t', 'mi,ma,mu,mai');
-    });
-            
-    $("#ni").on('click', function() {
-        adjustSymbol('scale', 'ni', 'ni-t', 'ni,na,nu,nai');
-    });
-    $("#si").on('click', function() {
-        adjustSymbol('scale', 'si', 'si-t', 'si,sa,su,sai');
-    });
-    $("#li").on('click', function() {
-        adjustSymbol('scale', 'li', 'li-t', 'li,la,lu,lai');
-    });
-            
-    $("#ji").on('click', function() {
-        adjustSymbol('scale', 'ji', 'ji-t', 'ji,ja,ju,jai');
-    });
-    $("#vi").on('click', function() {
-        adjustSymbol('scale', 'vi', 'vi-t', 'vi,va,vu,vai');
-    });
-    $("#ri").on('click', function() {
-        adjustSymbol('scale', 'ri', 'ri-t', 'ri,ra,ru,rai');
-    });
-            
-});
+  $(function() {
+      $('.symbol').on('click', function() {
+        adjustment($(this).parent()[0].id);
+      });
+  });
+
+  document.querySelector('video').playbackRate = 0.2;
+
+})();

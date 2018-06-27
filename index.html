@@ -3,15 +3,15 @@
 <!--
 
 
-         .-                           ::-           `-::-.      .::::––.          .-:::`  
-        :MMy                          NMd         omMMMMMMMd:   +MMMMMMMMms-   `yNMMMMM/  
-       /MMMMy                 `       NMNmNmy-   hMMh:``.:dMM+   ````.-/sNMMo  hMMo.```   
-      /MMs:MMy            .smMMMNh:   NMm––dMM` :MMm      `NMN           .MMM. dMM:       
-     /MMh  oMMy          :MMm+:/dMMo  yMNsomMd  oMMo       hMM-           dMM/ -mMMNmdd:  
-    /MMm`   hMMy         hMM:    NMN   :oyyo:   sMM/       yMM:          `NMM-   -/oooo-  
-   /MMN.    `mMMy        sMM/   -MMN            yMM:       sMM:        `:dMMd             
-  +MMMNddddddmMMMy ydddddmMMNddmMMm:            yMM:       sMM: /ddddmNMMMNo`             
-  osssssssssssssss.+ssssssssssso+-              /ss.       /ss. -sssooo+:.                
+         .-                           ::-           `-::-.      .::::––.          .-:::`
+        :MMy                          NMd         omMMMMMMMd:   +MMMMMMMMms-   `yNMMMMM/
+       /MMMMy                 `       NMNmNmy-   hMMh:``.:dMM+   ````.-/sNMMo  hMMo.```
+      /MMs:MMy            .smMMMNh:   NMm––dMM` :MMm      `NMN           .MMM. dMM:
+     /MMh  oMMy          :MMm+:/dMMo  yMNsomMd  oMMo       hMM-           dMM/ -mMMNmdd:
+    /MMm`   hMMy         hMM:    NMN   :oyyo:   sMM/       yMM:          `NMM-   -/oooo-
+   /MMN.    `mMMy        sMM/   -MMN            yMM:       sMM:        `:dMMd
+  +MMMNddddddmMMMy ydddddmMMNddmMMm:            yMM:       sMM: /ddddmNMMMNo`
+  osssssssssssssss.+ssssssssssso+-              /ss.       /ss. -sssooo+:.
 
 
 -->
@@ -26,61 +26,65 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 </head>
 <body>
+<!-- The video -->
+<video autoplay muted loop id="video">
+  <source src="Time Lapse Video Of Aurora Borealis.mp4" type="video/mp4">
+</video>
 <div class="outer">
         <div class="inner">
             <div><h1 id="title">Inuktitut Syllabics</h1></div>
-            <div class="row" style="vertical-align:center;">
-                <div class="container">
-                    <div id="ai" class="symbol hvr-pop"><h1>ᐁ</h1></div>
-                    <div id="ai-t" class="transcription">ai</div>
+            <div class="row">
+                <div class="container" id="ai">
+                    <div class="symbol hvr-pop"><h1>ᐁ</h1></div>
+                    <div class="transcription">ai</div>
                 </div>
-                <div class="container">
-                    <div id="pai" class="symbol"><h1>ᐯ</h1></div>
-                    <div id="pai-t" class="transcription">pai</div>
+                <div class="container" id="pai">
+                    <div class="symbol"><h1>ᐯ</h1></div>
+                    <div class="transcription">pai</div>
                 </div>
-                <div class="container">
-                    <div id="tai" class="symbol"><h1>ᑌ</h1></div>
-                    <div id="tai-t" class="transcription">tai</div>
+                <div class="container" id="tai">
+                    <div class="symbol"><h1>ᑌ</h1></div>
+                    <div class="transcription">tai</div>
                 </div>
-                <div class="container">
-                    <div id="ki" class="symbol"><h1>ᑫ</h1></div>
-                    <div id="ki-t" class="transcription">kai</div>
+                <div class="container" id="kai">
+                    <div class="symbol"><h1>ᑫ</h1></div>
+                    <div class="transcription">kai</div>
                 </div>
             </div>
             <div class="row">
-                <div class="container">
-                    <div id="gi" class="symbol"><h1>ᒉ</h1></div>
-                    <div id="gi-t" class="transcription">gai</div>
+                <div class="container" id="gai">
+                    <div class="symbol"><h1>ᒉ</h1></div>
+                    <div class="transcription">gai</div>
                 </div>
-                <div class="container">
-                    <div id="mi" class="symbol"><h1>ᒣ</h1></div>
-                    <div id="mi-t" class="transcription">mai</div>
+                <div class="container" id="mai">
+                    <div class="symbol"><h1>ᒣ</h1></div>
+                    <div class="transcription">mai</div>
                 </div>
-                <div class="container">
-                    <div id="ni" class="symbol"><h1>ᓀ</h1></div>
-                    <div id="ni-t" class="transcription">nai</div>
+                <div class="container" id="nai">
+                    <div class="symbol"><h1>ᓀ</h1></div>
+                    <div class="transcription">nai</div>
                 </div>
-                <div class="container">
-                    <div id="si" class="symbol"><h1>ᓭ</h1></div>
-                    <div id="si-t" class="transcription">sai</div>
+                <div class="container" id="sai">
+                    <div class="symbol"><h1>ᓭ</h1></div>
+                    <div class="transcription">sai</div>
                 </div>
             </div>
             <div class="row">
-                <div class="container">
-                    <div id="li" class="symbol"><h1>ᓓ</h1></div>
-                    <div id="li-t" class="transcription">lai</div>
+                <div class="container" id="lai">
+                    <div class="symbol"><h1>ᓓ</h1></div>
+                    <div class="transcription">lai</div>
                 </div>
-                <div class="container">
-                    <div id="ji" class="symbol"><h1>ᔦ</h1></div>
-                    <div id="ji-t" class="transcription">jai</div>
+                <div class="container" id="jai">
+                    <div class="symbol"><h1>ᔦ</h1></div>
+                    <div class="transcription">jai</div>
                 </div>
-                <div class="container">
-                    <div id="vi" class="symbol"><h1>ᕓ</h1></div>
-                    <div id="vi-t" class="transcription">vai</div>
+                <div class="container" id="vai">
+                    <div class="symbol"><h1>ᕓ</h1></div>
+                    <div class="transcription">vai</div>
                 </div>
-                <div class="container">
-                    <div id="ri" class="symbol"><h1>ᕃ</h1></div>
-                    <div id="ri-t" class="transcription">rai</div>
+                <div class="container" id="rai">
+                    <div class="symbol"><h1>ᕃ</h1></div>
+                    <div class="transcription">rai</div>
                 </div>
             </div>
         </div>
