@@ -38,7 +38,6 @@ body {
     display: table-cell;
     vertical-align: middle;
     text-align: center;
-    border: 1px red solid;
 }
 
 .row {
