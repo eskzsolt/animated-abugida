@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/eskzsolt/animated-abugida/issues"
   },
-  "homepage": "https://github.com/eskzsolt/animated-abugida#readme"
+  "homepage": "https://github.com/eskzsolt/animated-abugida#readme",
+  "devDependencies": {
+    "lite-server": "^2.4.0"
+  }
 }
