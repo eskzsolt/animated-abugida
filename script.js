@@ -3,7 +3,7 @@
   function adjustment(id) {
 
     const abugida = {
-      'e': ['a', 'i', 'o', 'ei'],
+      'e': ['a', 'i', 'o', 'e'],
       'pe': ['pa', 'pi', 'po', 'pe'],
       'te': ['ta', 'ti', 'to', 'te'],
       'ke': ['ki', 'ka', 'ko', 'ke'],
