@@ -1,40 +1,28 @@
 (function() {
 
-  function adjustment(id) {
+  function adjust(id, direction) {
 
-    let mode = ['_', 'p', 't', 'r', 'f', 'th'].includes(id) ? 'symmetrical' : 'asymmetrical';
+    const vowels = ['i', 'o', 'e', 'a'];
+    const transf = ['1, 1', '-1, 1', '-1, -1', '1, -1'];
 
-    const vowels = {
-      'symmetrical': ['o', 'e', 'a', 'i'],
-      'asymmetrical': ['e', 'o', 'a', 'i']
-    };
+    if (($(`#${id}`).data('adjustments')) === undefined) ($(`#${id}`).data('adjustments', 0));
+    const adj = ($('#' + id).data('adjustments')) + direction;
+    ($(`#${id}`).data('adjustments', adj));
 
-    const scale_dimensions = ['-1, 1', '-1, -1', '1, -1', '1, 1'];
+    const pos = adj < 0 ? adj + Math.ceil(Math.abs(adj)/4)*4 : adj > 3 ? adj - Math.floor(adj/4)*4 : adj;
 
-    const rotations = [90, 180, 270, 360];
-
-    let counter = ($('#' + id).data('counter')) || 0;
-    if (counter === 4) counter = 0;
-
-    if (mode === 'symmetrical') {
-      // symmetrical
-      let ank = ($('#' + id).data('angle') + 90) || 90;
-      $($('#' + id).find('.symbol')).css({'transform': 'rotate(' + ank + 'deg)'});
-      $('#' + id).data('angle', ank);
-    } else {
-      // asymmetrical - DIFFERENT ORDER
-      $($('#' + id).find('.symbol')).css({'transform': 'scale(' + scale_dimensions[counter] + ')'});
-    }
-    $($('#' + id).find('.transcription')).text((id === '_' ? '' : id) + vowels[mode][counter]);
-
-    counter++;
-    $('#' + id).data('counter', counter);
+    $($(`#${id}`).find('.symbol')).css({'transform': (['_', 'p', 't', 'r', 'f', 'th'].includes(id) ? `rotate(${adj*90}deg)` : `scale(${transf[pos]})`) });
+    $($(`#${id}`).find('.transcription')).text((id === '_' ? '' : id) + vowels[pos])
 
   }
 
   $(function() {
       $('.symbol').on('click', function() {
-        adjustment($(this).parent()[0].id);
+        adjust($(this).parent()[0].id, -1);
+      });
+      $('.symbol').on('contextmenu', function() {
+        adjust($(this).parent()[0].id, 1);
+        return false;
       });
   });
 
