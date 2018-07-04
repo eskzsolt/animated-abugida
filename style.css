@@ -1,14 +1,25 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400);
 
-body {
+html {
     padding: auto;
     margin: auto;
+    height:100%;
+}
+
+body {
+    padding:auto;
+    margin: auto;
+    height: 100%;
     font-family: 'Montserrat', sans-serif;
     /*background-color: #37615e;*/
     text-shadow: 0 0 1px rgba(51,51,51,0.2);
-    background: #111;
+    background: #191919;
     color: #f1f1f1;
     /*text-transform: uppercase;*/
+}
+
+.subtitle {
+  //border: 1px red solid;
 }
 
 #video {
@@ -34,9 +45,16 @@ body {
     width: 100%;
 }
 
-.inner {
+.middle {
     display: table-cell;
     vertical-align: middle;
+}
+
+.inner {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80vw;
+    //border: 1px red solid;
     text-align: center;
 }
 
@@ -44,7 +62,7 @@ body {
     display: inline-table;
     vertical-align: middle;
     text-align: center;
-    width: 60vw;
+    width: 50%;
     min-width: 300px;
 }
 
@@ -92,8 +110,9 @@ body {
   user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
 }
 
-@media only screen and (min-width: 1000px) {
-  .row {
-    width: 50%;
+@media only screen and (min-width: 100px) {
+  .inner {
+    //width: 50vw;
+    //height: 50vh;
   }
 }
