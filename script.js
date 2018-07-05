@@ -5,13 +5,13 @@
     const vowels = ['i', 'o', 'e', 'a'];
     const transf = ['1, 1', '-1, 1', '-1, -1', '1, -1'];
 
-    if (($(`#${id}`).data('adjustments')) === undefined) ($(`#${id}`).data('adjustments', 0));
-    const adj = ($('#' + id).data('adjustments')) + direction;
-    ($(`#${id}`).data('adjustments', adj));
+    if (($(`#${id}`).data('counter')) === undefined) ($(`#${id}`).data('counter', 0));
+    const cnt = ($('#' + id).data('counter')) + direction;
+    ($(`#${id}`).data('counter', cnt));
 
-    const pos = adj < 0 ? adj + Math.ceil(Math.abs(adj)/4)*4 : adj > 3 ? adj - Math.floor(adj/4)*4 : adj;
+    const pos = cnt < 0 ? cnt + Math.ceil(Math.abs(cnt)/4)*4 : cnt > 3 ? cnt - Math.floor(cnt/4)*4 : cnt;
 
-    $($(`#${id}`).find('.symbol')).css({'transform': (['_', 'p', 't', 'r', 'f', 'th'].includes(id) ? `rotate(${adj*90}deg)` : `scale(${transf[pos]})`) });
+    $($(`#${id}`).find('.symbol')).css({'transform': (['_', 'p', 't', 'r', 'f', 'th'].includes(id) ? `rotate(${cnt*90}deg)` : `scale(${transf[pos]})`) });
     $($(`#${id}`).find('.transcription')).text((id === '_' ? '' : id) + vowels[pos])
 
   }
