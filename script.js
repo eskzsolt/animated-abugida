@@ -17,12 +17,14 @@
   }
 
   $(function() {
-      $('.symbol').on('click', function() {
-        adjust($(this).parent()[0].id, -1);
-      });
-      $('.symbol').on('contextmenu', function() {
-        adjust($(this).parent()[0].id, 1);
-        return false;
+      $('.symbol').on({
+        click: function() {
+          adjust($(this).parent()[0].id, -1);
+        },
+        contextmenu: function() {
+          adjust($(this).parent()[0].id, 1);
+          return false;
+        }
       });
   });
 
