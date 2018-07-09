@@ -18,10 +18,6 @@ body {
     /*text-transform: uppercase;*/
 }
 
-.subtitle {
-  //border: 1px red solid;
-}
-
 #video {
     position: fixed;
     overflow: hidden;
@@ -101,7 +97,7 @@ body {
     transition: all 1s ease;
 }
 
-#title, .subtitle, .row, .transcription {
+#title, .row, .transcription {
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
   -khtml-user-select: none; /* Konqueror HTML */
