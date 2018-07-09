@@ -26,6 +26,20 @@
           return false;
         }
       });
+
+
+      $('#info-button').on('click', function() {
+        $('#_').toggle(function(){
+          console.log('show');
+          $(this).hide();
+        },function(){
+          console.log('hide');
+          $(this).show();
+        });
+      });
+
+
+
   });
 
   document.querySelector('video').playbackRate = 0.2;
