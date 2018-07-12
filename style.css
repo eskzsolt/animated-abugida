@@ -105,11 +105,3 @@ body {
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
 }
-/*
-@media only screen and (min-width: 100px) {
-  .inner {
-    width: 50vw;
-    height: 50vh;
-  }
-}
-*/
