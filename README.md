@@ -1,6 +1,6 @@
 ![Canadian Aboriginal Syllabics](https://github.com/eskzsolt/animated-abugida/blob/master/tumblr_inline_p0ojk6zoR01tq3sd6_1280.png)
 
-An excerpt of characters from the consonant-vowel pair based writing system used by some indigenous Canadian languages of Cree and Inuktitut.
+An excerpt of characters from the consonant-vowel pair based writing system used by the indigenous Canadian languages of Cree and Inuktitut.
 
 *Inspired by:*
 
