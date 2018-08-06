@@ -2,7 +2,7 @@
 
 An excerpt of characters to illustrate the logic behind the the consonant-vowel pair based writing system that's used by the indigenous Canadian languages of Cree and Inuktitut.
 
-*Inspired by:*
+Inspired by:
 
 [![ᑖᒻ ᔅᑳᑦ and ᖃᓂᐅᔮᖅᐸᐃᑦ](http://img.youtube.com/vi/xW4hI_METac/mqdefault.jpg "ᑖᒻ ᔅᑳᑦ and ᖃᓂᐅᔮᖅᐸᐃᑦ")](https://youtu.be/xW4hI_METac)
 
