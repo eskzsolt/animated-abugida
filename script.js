@@ -2,7 +2,6 @@
 
   function adjust(id, direction) {
 
-    const vowels = ['i', 'o', 'e', 'a'];
     const transf = ['1, 1', '-1, 1', '-1, -1', '1, -1'];
 
     if (($(`#${id}`).data('counter')) === undefined) ($(`#${id}`).data('counter', 0));
@@ -12,7 +11,7 @@
     const pos = cnt < 0 ? cnt + Math.ceil(Math.abs(cnt)/4)*4 : cnt > 3 ? cnt - Math.floor(cnt/4)*4 : cnt;
 
     $($(`#${id}`).find('.symbol')).css({'transform': (['_', 'p', 't', 'r', 'f', 'th'].includes(id) ? `rotate(${cnt*90}deg)` : `scale(${transf[pos]})`) });
-    $($(`#${id}`).find('.transcription')).text((id === '_' ? '' : id) + vowels[pos])
+    $($(`#${id}`).find('.transcription')).text((id === '_' ? '' : id) + ['i', 'o', 'e', 'a'][pos])
 
   }
 
